@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Microwave Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        div.main{
+            width: 520px;
+            height: auto;
+            padding: 40px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        div.area1{
+            width: 320px;
+            height: 55px;;
+            margin: 0 auto;
+            padding-left: 90px;
+            padding-right: 90px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        div.area2{
+            width: 500px;
+            height: 55px;
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>welcoming();</script>
+    <div class="main">
+        <form method="post">
+            <center>
+                <span class="titles" style="font-size: 20pt;">Welcome back to CookIn, User!</span><br><br><br>
+                <span class="titles" style="font-size: 17pt;">Microwave Settings</span><br>
+                <hr><br>
+                <img src="image/food image.png" class="center_image"><br><br>
+            </center>
+            <div class="area1">
+                <div style="float: left;">
+                    <label for="inp_start_time" class="label_text">Start Time</label><br>
+                    <input name="inp_start_time" type="time" class="raw_input time_setting" id="inp_start_time">
+                </div>
+                <div style="float: right;">
+                    <label for="inp_stop_time" class="label_text">Stop Time</label><br>
+                    <input name="inp_stop_time" type="time" class="raw_input time_setting" id="inp_stop_time">
+                </div>
+            </div>
+            <div class="area2">
+                <div style="margin: 0 auto; width: 323px; height: auto;">
+                    <label for="inp_power" class="label_text">Power</label><br>
+                    <select name="inp_power" class="raw_input selection" id="inp_power">
+                        <option value="Low">Low</option>
+                        <option value="Medium-Low">Medium-Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Medium-High">Medium-High</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+            </div>
+            <div class="area1">
+                <button name="start_button" type="button" class="raw_button ss_button" style="float: left; background: #4CAF50;" onclick="getSettingsData();">START</button>
+                <input name="stop_button" type="button" value="STOP" class="raw_button ss_button" style="float: right; background: #F4511E;">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

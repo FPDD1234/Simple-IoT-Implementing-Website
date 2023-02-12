@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        div.main{
+            width: 520px;
+            height: auto;
+            padding: 40px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+        }
+
+        div.captcha{
+            width: 240px;
+            height: 75px;
+            padding: 10px;
+            background: #F5F5F5;
+            border: 1px solid #9E9E9E;
+            border-radius: 5px; 
+            font-size: 14pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form method="post" action="microwave_settings.html">
+            <!--Title-->
+            <center><span style="color: #616161; font-size: 20pt; font-weight: normal;">Sign In</span></center><br><br>
+
+            <!--Username & Password Input-->
+            <input name="inp_name" type="text" class="raw_input text_input" id="inp_name"><br>
+            <label for="inp_name" class="label_text">Username</label><br><br>
+            <input name="inp_password" type="password" class="raw_input text_input"><br>
+            <label for="inp_password" class="label_text">Password</label><br>
+
+            <!--Password Recovery Link-->
+            <a href="https://www.google.com" target="_self" style="float: right;">Forgot Password?</a><br><br>
+
+            <!--Recaptcha-->
+            <div class="captcha">
+                <div style="width: 170px; height: 26px; float: left; margin-top: 23px;">
+                    <input name="captcha" type="checkbox" value="notrobot" style="width: 18px; height: 18px;">
+                    <span style="margin-right: 15px; margin-top: 2px; float: right;">I'm not a robot</span>
+                </div>
+                <img src="image/recaptcha.png" width="70px" style="float: right;">
+            </div><br><br>
+
+            <!--Sign Up Link-->
+            <a href="https://www.google.com" target="_self">First time? Sign up here!</a>
+
+            <!--Submission-->
+            <a><input name="submit_button" type="submit" value="Sign In" class="raw_button submit_button" onclick="getLoginData();"></a>
+
+        </form>
+    </div>
+</body>
+</html>
